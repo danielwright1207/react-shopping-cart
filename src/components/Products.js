@@ -4,7 +4,7 @@ import { ProductContext } from "../contexts/ProductContext";
 import Product from "./Product";
 
 const Products = () => {
-  const { products, addItem } = useContext(ProductContext);
+  const { products, addItem } = useContext(ProductContext); // getting products from the productcontext, geting addItem from app
   return (
     <div className="products-container">
       {products.map((product) => (

@@ -20,13 +20,17 @@ function App() {
   return (
     <div className="App">
       <ProductContext.Provider value={{ products, addItem }}>
+        {" "}
+        // passing down products, and the addItem function as values so that the
+        shoppingcart can have access to them through useContext//
         <CartContext.Provider value={{ cart }}>
+          //passing down cart as values so that the shoppingcart can have access
+          to them through useContext//
           <Navigation />
           {/* Routes */}
           <Route exact path="/">
             <Products />
           </Route>
-
           <Route path="/cart">
             <ShoppingCart />
           </Route>
